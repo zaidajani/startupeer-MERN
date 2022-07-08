@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+.container {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.mt4 {
+  padding-top: 40px;
+}
+
+.ptagline {
+  font-family: 'Amiri', serif;
+  color: #838383;
+  font-size: 23px;
+}
+
+.cardContainer {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 75%;
+}
+
+.loginCardHolder {
+  position: absolute;
+  width: 70%;
+  left: 72%;
+}
+
+.avatarFlex {
+  display: flex;
+  flex-direction: row;
+  width: 600px;
+  align-items: center;
+}
+
+.urlLabel {
+  color: #151449;
+  font-weight: 500;
+  font-size: 17px;
+  margin-left: 30px;
+  font-family: 'Inter', sans-serif;
+}
+
+.info {
+  color: #151449;
+  font-weight: 300;
+  font-size: 14px;
+  margin-left: 30px;
+  margin-top: 4px;
+  font-family: 'Inter', sans-serif;
+}
+
+.title {
+  color: #151449;
+  font-weight: 400;
+  font-size: 24px;
+  font-family: 'Inter', sans-serif;
+}
+
+.description {
+  font-family: 'Inter', sans-serif;
+  color: #151449;
+  line-height: 2;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.buttonDiff {
+  height: 40px;
+  width: 200px;
+  background-color: #CDC1FF;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  justify-content: space-around;
+  color: #151449;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+}
+
+.buttonDiff:hover {
+  background-color: #a794f3;
+}

@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+.card {
+  width: 90%;
+  height: 250px;
+  margin-top: 50px;
+  background-color: #E5D9F2;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loginCard {
+  width: 30%;
+  height: 600px;
+  margin-top: 50px;
+  background-color: #CDC1FF;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardText {
+  font-family: 'Inter', sans-serif;
+  color: #151449;
+  line-height: 2;
+  font-size: 17px;
+}
+
+.cardLabel {
+  font-family: 'Inter', sans-serif;
+  color: #151449;
+  font-size: 18px;
+  margin-top: 65px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: right;
+}

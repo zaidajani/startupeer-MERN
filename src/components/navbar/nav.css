@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  height: 55px;
+  background-color: #7371FC;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  height: 55px;
+  font-size: 30px;
+  margin-left: 20px;
+  font-family: 'Jaldi', sans-serif;
+  color: #E5D9F2;
+  cursor: pointer;
+}
+
+.left {
+  display: flex;
+  flex-direction: row;
+  width: 150px;
+  justify-content: space-around;
+  margin-right: 30px;
+  font-family: 'Jaldi', sans-serif;
+  color: #E5D9F2;
+  font-size: 20px;
+}
+
+.left .login {
+  cursor: pointer;
+}
