@@ -8,7 +8,14 @@ import { StartupDetail } from './screens/startupDetail.screen';
 function App() {
   return (
     <>
-      <Login />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LogoutView />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/detail" element={<StartupDetail />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
