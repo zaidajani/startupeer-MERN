@@ -1,0 +1,88 @@
+.loginNav {
+  background-color: #FFFFFF;
+  border-bottom: 0.3px solid #CBCBCB;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  height: 55px;
+  font-size: 25px;
+  margin-left: 20px;
+  font-family: 'Jaldi', sans-serif;
+  color: #151449;
+  cursor: pointer;
+}
+
+.loginCont {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.container-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 90vh;
+}
+
+.field {
+  margin-top: 10px;
+}
+
+.inp {
+  width: 400px;
+  height: 45px;
+  border-radius: 3px;
+  border: 1px solid #CBCBCB;
+  font-size: 16px;
+  font-family: 'Jaldi', sans-serif;
+  color: #151449;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.label {
+  font-family: 'Jaldi', sans-serif;
+}
+
+.outing-label {
+  font-family: 'Jaldi', sans-serif;
+  color: #151449;
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+.login-button {
+  width: 400px;
+  height: 45px;
+  border-radius: 3px;
+  margin-top: 10px;
+  font-family: 'Jaldi', sans-serif;
+  background-color: #7371FC;
+  color: white;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-around;
+}
+
+.login-button:hover {
+  background-color: #605dfc;
+}
+
+.filedp {
+  font-size: 27px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+} 
+
+.label-login {
+  font-family: 'Jaldi', sans-serif;
+  color: #151449;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
