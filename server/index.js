@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const userRoute = require('./routes/user');
-const authRoute = require('./routes/auth');
+const userRoute = require('./routes/user.routes');
+const authRoute = require('./routes/auth.routes');
 const app = express();
 
 mongoose
