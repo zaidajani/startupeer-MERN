@@ -7,7 +7,15 @@ export const NavBar = () => {
     <>
       <nav>
         <div className="logo">
-          <b>Startupeer</b>
+          <Link
+            to="/"
+            style={{
+              textDecoration: "none",
+              color: "#E5D9F2",
+            }}
+          >
+            <b>Startupeer</b>
+          </Link>
         </div>
         <div className="left">
           <div className="login">

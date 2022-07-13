@@ -1,15 +1,37 @@
 import React from "react";
 import "./nav.css";
 import { Link, Navigate, useNavigate } from "react-router-dom";
+import axios from "axios";
 
-export const AuthNavBar = ({ username }) => {
+export const AuthNavBar = () => {
   const navigate = useNavigate();
+  const [username, setUsername] = React.useState("");
+
+  React.useEffect(() => {
+    axios
+      .get("http://localhost:4000/api/user/info", {
+        headers: {
+          "x-auth-token": localStorage.getItem("token"),
+        },
+      })
+      .then((res) => {
+        setUsername(res.data.username);
+      });
+  }, []);
 
   return (
     <>
       <nav>
         <div className="logo">
-          <b>Startupeer</b>
+          <Link
+            to="/"
+            style={{
+              textDecoration: "none",
+              color: "#E5D9F2",
+            }}
+          >
+            <b>Startupeer</b>
+          </Link>
         </div>
         <div
           style={{
@@ -31,7 +53,7 @@ export const AuthNavBar = ({ username }) => {
               color: "#151449",
             }}
             onClick={() => {
-              localStorage.removeItem('token');
+              localStorage.removeItem("token");
               window.location.href = "/login";
             }}
           >

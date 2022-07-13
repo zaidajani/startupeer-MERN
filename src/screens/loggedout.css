@@ -4,6 +4,7 @@
 .container {
   padding-left: 5%;
   padding-right: 5%;
+  padding-bottom: 10%;
 }
 
 .mt4 {
@@ -83,4 +84,9 @@
 
 .buttonDiff:hover {
   background-color: #a794f3;
+}
+
+.inline {
+  display: flex;
+  flex-direction: row;
 }

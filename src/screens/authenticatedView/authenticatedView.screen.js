@@ -28,8 +28,14 @@ export const AuthenticatedView = () => {
     <>
       <AuthNavBar username={data.username} />
       <div className="container mt4">
+        <div className="tagline">
+          <p className="ptagline">Startup ideas seeking for reviews.</p>
+        </div>
         <div className="loginCardHolder">
-          <BriefProfile username={data.username} avaText={data.username.charAt(0).toUpperCase()} />
+          <BriefProfile
+            username={data.username}
+            avaText={data.username.charAt(0).toUpperCase()}
+          />
         </div>
         <div className="cardContainer">
           {startupsdata.map((startup) => {
