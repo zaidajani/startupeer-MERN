@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { LogoutView } from './screens/loggedOut.screen';
 import { Register } from './screens/lognreg/register.screen';
 import { Login } from './screens/lognreg/login.screen';
+import { AuthenticatedView } from './screens/authenticatedView/authenticatedView.screen';
 import { StartupDetail } from './screens/startupDetail.screen';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/detail" element={<StartupDetail />} />
+          <Route path="/authenticatedView" element={<AuthenticatedView />} />
         </Routes>
       </BrowserRouter>
     </>

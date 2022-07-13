@@ -1,12 +1,21 @@
 import React from "react";
 import "./register.css";
+import { Link } from "react-router-dom";
 
 export const Login = () => {
   return (
     <>
       <nav className="loginNav">
         <div className="brand-logo">
-          <b>Startupeer</b>
+          <Link
+            to="/"
+            style={{
+              textDecoration: "none",
+              color: "#151449",
+            }}
+          >
+            <b>Startupeer</b>
+          </Link>
         </div>
       </nav>
       <div className="container-login">
@@ -24,11 +33,13 @@ export const Login = () => {
               <p className="label">Password</p>
               <input className="inp" type="password" />
             </div>
-            <div className="outing-label">Dont have an account? create account.</div>
+            <div className="outing-label">
+              Dont have an account? <Link to="/register">create account</Link>.
+            </div>
             <div className="login-button">Login</div>
           </div>
         </div>
       </div>
     </>
-  )
-}
+  );
+};

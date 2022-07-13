@@ -1,5 +1,6 @@
 import React from "react";
-import "./nav.css"
+import "./nav.css";
+import { Link } from "react-router-dom";
 
 export const NavBar = () => {
   return (
@@ -10,13 +11,29 @@ export const NavBar = () => {
         </div>
         <div className="left">
           <div className="login">
-            Login
+            <Link
+              to="/login"
+              style={{
+                textDecoration: "none",
+                color: "#E5D9F2",
+              }}
+            >
+              Login
+            </Link>
           </div>
           <div className="login">
-            Register
+            <Link
+              to="/register"
+              style={{
+                textDecoration: "none",
+                color: "#E5D9F2",
+              }}
+            >
+              Register
+            </Link>
           </div>
         </div>
       </nav>
     </>
-  )
-}
+  );
+};

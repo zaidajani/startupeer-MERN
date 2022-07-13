@@ -86,3 +86,17 @@
   font-size: 15px;
   margin-bottom: 20px;
 }
+
+.errorDiv {
+  width: 400px;
+  height: 45px;
+  border-radius: 3px;
+  margin-top: 10px;
+  font-family: 'Jaldi', sans-serif;
+  background-color: #F03700;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
