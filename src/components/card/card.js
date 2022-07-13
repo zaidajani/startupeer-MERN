@@ -1,19 +1,18 @@
 import React from "react";
 import "./card.css";
 
-export const CardComp = () => {
+export const CardComp = ({ title, brief }) => {
   return (
     <>
       <div className="card">
         <div className="cardText">
           <p>
-          <b>Spacer Spaces</b>
-            , A home selling platform aggregator creating ease for people
-            seeking for homes.
+          <b>{title}</b>
+            , {brief}
           </p>
         </div>
         <div className="cardLabel">
-          <b>Spacer Spaces</b>
+          <b>{title}</b>
         </div>
       </div>
     </>

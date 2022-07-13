@@ -16,7 +16,7 @@
   height: 600px;
   margin-top: 50px;
   background-color: #CDC1FF;
-  padding: 30px;
+  padding: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,4 +38,23 @@
   align-items: center;
   width: 100%;
   justify-content: right;
+}
+
+.briefavatar {
+  height: 200px;
+  width: 200px;
+  background-color: #7371FC;
+  border-radius: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+  font-size: 120px;
+  font-family: 'inter';
+}
+
+.name {
+  font-family: 'Jaldi';
+  font-size: 20px;
+  margin: 20px;
 }

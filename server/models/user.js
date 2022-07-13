@@ -13,6 +13,13 @@ const userSchema = new mongoose.Schema({
   password: {
     type: String,
     required: true,
+  },
+  makes: {
+    type: Array,
+  },
+  dof: {
+    type: Date,
+    default: Date.now()
   }
 });
 
