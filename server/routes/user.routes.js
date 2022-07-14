@@ -2,6 +2,7 @@ const express = require("express");
 const User = require("../models/user");
 const auth = require("./../middleware/auth");
 const Businesses = require("./../models/startup");
+const mongoose = require('mongoose');
 const bcrypt = require("bcrypt");
 const router = express.Router();
 const _ = require("lodash");
@@ -32,7 +33,22 @@ router.get("/info", auth, async (req, res) => {
 router.get("/", async (req, res) => {
   const startups = await Businesses.find();
   res.send(startups);
-})
+});
+
+router.get("/:id", async (req, res) => {
+  if (!mongoose.Types.ObjectId.isValid(req.params.id)) return res.status(400).send('invalid object ID');
+  const startups = await Businesses.findById(req.params.id);
+  if (!startups) return res.send('invalid object ID');
+  res.send(startups);
+});
+
+router.get("/userInfo/:id", async (req, res) => {
+  if (!mongoose.Types.ObjectId.isValid(req.params.id)) return res.status(400).send('invalid object ID');
+  const startups = await User.findById(req.params.id);
+  if (!startups) return res.send('invalid object ID');
+  const obj = { name: startups.username, email: startups.email, id: startups._id }
+  res.send(obj);
+});
 
 router.post("/newBusiness", auth, async (req, res) => {
   const userData = await User.findById(req.user._id);

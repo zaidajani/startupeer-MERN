@@ -2,12 +2,14 @@ import React from "react";
 import { AuthNavBar } from "../../components/navbar/authenticatedNav";
 import { CardComp } from "./../../components/card/card";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export const Form = () => {
   const [name, setName] = React.useState("");
   const [brief, setBrief] = React.useState("");
   const [explain, setExplain] = React.useState("");
   const [error, setError] = React.useState("");
+  const navigate = useNavigate();
 
   const addStartup = () => {
     if (!name || !brief || !explain) {
@@ -34,6 +36,8 @@ export const Form = () => {
       })
       .then(res => {
         console.log(res.data);
+        alert('Business successfully made!');
+        navigate('/');
       })
       .catch(err => {
         setError(err);

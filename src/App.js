@@ -29,14 +29,13 @@ function App() {
               <Route path="/add" element={<Form />} />
               <Route path="/login" element={<Navigate to="/" />} />
               <Route path="/register" element={<Navigate to="/" />} />
-              <Route path="/detail" element={<StartupDetail />} />
+              <Route path="/detail/:id" element={<StartupDetail />} />
             </>
           ) : (
             <>
               <Route path="/" element={<LogoutView />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
-              <Route path="/detail" element={<StartupDetail />} />
             </>
           )}
         </Routes>

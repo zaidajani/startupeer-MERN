@@ -1,29 +1,62 @@
 import React from "react";
 import { NavBar } from "../components/navbar/navbar";
+import { AuthNavBar } from "../components/navbar/authenticatedNav";
 import "./loggedout.css";
 import { Avatar } from "../components/avatar/avatar";
+import { useParams } from "react-router-dom";
 import { Button } from "../components/button/button";
+import { format } from "timeago.js";
+import axios from "axios";
 
 export const StartupDetail = () => {
+  const params = useParams();
+  const [data, setData] = React.useState({});
+  const [authdata, setAuthData] = React.useState({});
+  const [user, setUser] = React.useState();
+
+  React.useEffect(() => {
+    if (localStorage.getItem("token")) {
+      setUser(true);
+    } else {
+      setUser(false);
+    }
+
+    axios
+      .get(`http://localhost:4000/api/user/${params.id}`, {
+        headers: {
+          "x-auth-token": localStorage.getItem("token"),
+        },
+      })
+      .then((res) => {
+        setData(res.data);
+        axios
+          .get(`http://localhost:4000/api/user/userInfo/${res.data.author}`)
+          .then((res2) => {
+            setAuthData(res2.data);
+          });
+      });
+  }, []);
+
   return (
     <>
-      <NavBar />
+      {user ? <AuthNavBar /> : <NavBar />}
       <div className="container mt4">
         <div className="avatarFlex">
           <Avatar />
           <div className="infoFlex">
-            <p className="urlLabel">/spacer-spaces</p>
-            <p className="info">Posted 8th july 2022 · Zaid Ajani · 500 reviews · 21 suggestions</p>
+            <p className="urlLabel">/{params.id}</p>
+            <p className="info">
+              Posted {format(data.dof)} · {authdata.name}
+            </p>
           </div>
         </div>
         <div className="title mt4">
           <p>
-            <b>Spacer Spaces</b> - A home selling platform aggregator creating ease of
-            use for people seeking for homes.
+            <b>{data.name}</b> - {data.brief}
           </p>
         </div>
         <div className="description mt4">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>{data.explaination}</p>
         </div>
         <div className="buttonDiff">
           <p>Post your opinions</p>

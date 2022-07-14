@@ -3,6 +3,7 @@ import { AuthNavBar } from "../../components/navbar/authenticatedNav";
 import { CardComp } from "../../components/card/card";
 import { BriefProfile } from "../../components/card/briefProfile";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export const AuthenticatedView = () => {
   const [data, setData] = React.useState({ username: "" });
@@ -39,7 +40,9 @@ export const AuthenticatedView = () => {
         </div>
         <div className="cardContainer">
           {startupsdata.map((startup) => {
-            return <CardComp title={startup.name} brief={startup.brief} />;
+            return <Link to={`/detail/${startup._id}`} style={{
+              textDecoration: 'none'
+            }}><CardComp title={startup.name} brief={startup.brief} /></Link>;
           })}
         </div>
       </div>
