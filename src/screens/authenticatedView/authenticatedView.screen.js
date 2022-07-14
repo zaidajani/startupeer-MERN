@@ -20,7 +20,7 @@ export const AuthenticatedView = () => {
       });
 
     axios.get("http://localhost:4000/api/user").then((res) => {
-      setStartupsData(res.data);
+      setStartupsData(res.data.reverse());
     });
   }, []);
 

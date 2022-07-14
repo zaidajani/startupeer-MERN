@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "../button/button";
 import "./card.css";
+import { Link } from "react-router-dom";
 
 export const BriefProfile = ({ username, avaText }) => {
   return (
@@ -12,12 +13,17 @@ export const BriefProfile = ({ username, avaText }) => {
         <div className="name">
           <p>{username}</p>
         </div>
-        <div className="button">
-          <p style={{
-            fontFamily: 'inter',
-            fontSize: 14
-          }}>Add another startup idea</p>
-        </div>
+        <Link to="/add" style={{
+          textDecoration: 'none',
+          color: '#000000'
+        }}>
+          <div className="button">
+            <p style={{
+              fontFamily: 'inter',
+              fontSize: 14
+            }}>Add another startup idea</p>
+          </div>
+        </Link>
         <div className="button">
           <p style={{
             fontFamily: 'inter',

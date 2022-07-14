@@ -12,7 +12,7 @@ export const LogoutView = () => {
     axios
       .get('http://localhost:4000/api/user')
       .then(res => {
-        setData(res.data);
+        setData(res.data.reverse());
       })
   }, []);
 
