@@ -44,7 +44,7 @@ export const StartupDetail = () => {
         <div className="avatarFlex">
           <Avatar />
           <div className="infoFlex">
-            <p className="urlLabel">/{params.id}</p>
+            <p className="urlLabel">/detail/{params.id}</p>
             <p className="info">
               Posted {format(data.dof)} · {authdata.name}
             </p>

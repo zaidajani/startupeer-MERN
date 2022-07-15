@@ -69,4 +69,19 @@ router.post("/newBusiness", auth, async (req, res) => {
   res.send(data);
 });
 
+router.post('/review/:id', auth, async (req, res) => {
+  const userData = await User.findById(req.user._id);
+  if (!mongoose.Types.ObjectId.isValid(req.params.id)) return res.status(400).send('invalid object ID');
+  const product = await Businesses.findById(req.params.id);
+  if (!product) return res.status(400).send('Product not found');
+  let business = product;
+  const newReview = {
+    by: req.user._id,
+    ros: req.body.ros
+  }
+  business.reviews.push(newReview);
+  await Businesses.findByIdAndUpdate(req.params.id, business);
+  res.send('successfully written');
+});
+
 module.exports = router;

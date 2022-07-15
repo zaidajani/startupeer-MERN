@@ -17,6 +17,9 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  reviews: {
+    type: Array
+  },
   dof: {
     type: Date,
     default: Date.now()
