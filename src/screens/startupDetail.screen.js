@@ -10,8 +10,9 @@ import axios from "axios";
 
 export const StartupDetail = () => {
   const params = useParams();
-  const [data, setData] = React.useState({});
+  const [data, setData] = React.useState({ reviews: [] });
   const [authdata, setAuthData] = React.useState({});
+  const [reviews, setReviews] = React.useState([]);
   const [user, setUser] = React.useState();
 
   React.useEffect(() => {
@@ -29,6 +30,7 @@ export const StartupDetail = () => {
       })
       .then((res) => {
         setData(res.data);
+        setReviews(res.data.reviews.reverse());
         axios
           .get(`http://localhost:4000/api/user/userInfo/${res.data.author}`)
           .then((res2) => {
@@ -58,14 +60,62 @@ export const StartupDetail = () => {
         <div className="description mt4">
           <p>{data.explaination}</p>
         </div>
-        <Link to={`/detail/review/${params.id}`} style={{
-          textDecoration: 'none'
-        }}>
+        <Link
+          to={`/detail/review/${params.id}`}
+          style={{
+            textDecoration: "none",
+          }}
+        >
           <div className="buttonDiff">
             <p>Post your opinions</p>
           </div>
         </Link>
-        
+        <div
+          className="title mt4"
+          style={{
+            fontSize: 17,
+          }}
+        >
+          <b>Past 5 reviews</b>
+          <div
+            className="infoFlex"
+            style={{
+              margin: 30,
+              marginLeft: 0,
+            }}
+          >
+            {reviews.map((review, index) => {
+              if (index == 5) {
+                return;
+              }
+              return (
+                <>
+                  <p
+                    style={{
+                      fontWeight: 400,
+                      marginLeft: 0,
+                      marginTop: 25,
+                      fontSize: 17,
+                      width: 800,
+                    }}
+                    className="urlLabel"
+                  >
+                    {review.ros}
+                  </p>
+                  <p
+                    className="info"
+                    style={{
+                      marginLeft: 0,
+                      marginTop: 15,
+                    }}
+                  >
+                    Made {format(review.dom)}
+                  </p>
+                </>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </>
   );
