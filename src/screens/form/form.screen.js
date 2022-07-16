@@ -18,8 +18,8 @@ export const Form = () => {
     if (name.length > 20) {
       return setError("Name must be shorter than 20 chars");
     }
-    if (brief.length > 100) {
-      return setError("Brief must be shorter than 50 chars");
+    if (brief.length > 200) {
+      return setError("Brief must be shorter than 200 chars");
     }
     if (explain.length > 2000) {
       return setError("Brief must be shorter than 2000 chars");

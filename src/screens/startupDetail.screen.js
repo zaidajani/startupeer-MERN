@@ -3,7 +3,7 @@ import { NavBar } from "../components/navbar/navbar";
 import { AuthNavBar } from "../components/navbar/authenticatedNav";
 import "./loggedout.css";
 import { Avatar } from "../components/avatar/avatar";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { Button } from "../components/button/button";
 import { format } from "timeago.js";
 import axios from "axios";
@@ -58,9 +58,14 @@ export const StartupDetail = () => {
         <div className="description mt4">
           <p>{data.explaination}</p>
         </div>
-        <div className="buttonDiff">
-          <p>Post your opinions</p>
-        </div>
+        <Link to={`/detail/review/${params.id}`} style={{
+          textDecoration: 'none'
+        }}>
+          <div className="buttonDiff">
+            <p>Post your opinions</p>
+          </div>
+        </Link>
+        
       </div>
     </>
   );

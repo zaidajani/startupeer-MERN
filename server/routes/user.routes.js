@@ -77,7 +77,8 @@ router.post('/review/:id', auth, async (req, res) => {
   let business = product;
   const newReview = {
     by: req.user._id,
-    ros: req.body.ros
+    ros: req.body.ros,
+    dom: Date.now()
   }
   business.reviews.push(newReview);
   await Businesses.findByIdAndUpdate(req.params.id, business);

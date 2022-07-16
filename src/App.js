@@ -5,6 +5,7 @@ import { LogoutView } from "./screens/loggedOut.screen";
 import { Register } from "./screens/lognreg/register.screen";
 import { Login } from "./screens/lognreg/login.screen";
 import { AuthenticatedView } from "./screens/authenticatedView/authenticatedView.screen";
+import { Review } from "./screens/review/review.screen";
 import { Form } from "./screens/form/form.screen";
 import { StartupDetail } from "./screens/startupDetail.screen";
 
@@ -30,6 +31,7 @@ function App() {
               <Route path="/login" element={<Navigate to="/" />} />
               <Route path="/register" element={<Navigate to="/" />} />
               <Route path="/detail/:id" element={<StartupDetail />} />
+              <Route path="/detail/review/:id" element={<Review />} />
             </>
           ) : (
             <>
