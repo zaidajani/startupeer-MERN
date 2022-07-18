@@ -12,7 +12,7 @@ import jwtDecode from "jwt-decode";
 export const StartupDetail = () => {
   const params = useParams();
   const [data, setData] = React.useState({ reviews: [] });
-  const [authdata, setAuthData] = React.useState({ name: '' });
+  const [authdata, setAuthData] = React.useState({ name: "" });
   const [reviews, setReviews] = React.useState([]);
   const [user, setUser] = React.useState();
   const [id, setId] = React.useState({});
@@ -51,7 +51,8 @@ export const StartupDetail = () => {
           <div className="infoFlex">
             <p className="urlLabel">/detail/{params.id}</p>
             <p className="info">
-              Posted {format(data.dof)} · {authdata.name} · {data.reviews.length} reviews
+              Posted {format(data.dof)} · {authdata.name} ·{" "}
+              {data.reviews.length} reviews
             </p>
           </div>
         </div>
@@ -65,6 +66,17 @@ export const StartupDetail = () => {
         </div>
         {data.author == id._id ? (
           <div />
+        ) : !user ? (
+          <Link
+            to={`/login`}
+            style={{
+              textDecoration: "none",
+            }}
+          >
+            <div className="buttonDiff">
+              <p>Post your opinions</p>
+            </div>
+          </Link>
         ) : (
           <Link
             to={`/detail/review/${params.id}`}
@@ -83,7 +95,11 @@ export const StartupDetail = () => {
             fontSize: 17,
           }}
         >
-           {data.author === id._id ? <b>All the reviews</b> : <b>Past 5 reviews</b>}
+          {data.author === id._id ? (
+            <b>All the reviews</b>
+          ) : (
+            <b>Past 5 reviews</b>
+          )}
           <div
             className="infoFlex"
             style={{

@@ -40,6 +40,7 @@ function App() {
               <Route path="/" element={<LogoutView />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
+              <Route path="/detail/:id" element={<StartupDetail />} />
             </>
           )}
         </Routes>

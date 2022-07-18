@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 export const ProfileScreen = () => {
-  const [data, setData] = React.useState([{}, []]);
+  const [data, setData] = React.useState([{ name: '' }, []]);
 
   React.useEffect(() => {
     const ids = jwtDecode(localStorage.getItem("token"));
@@ -39,7 +39,7 @@ export const ProfileScreen = () => {
               height: 300,
             }}
           >
-            <div className="briefavatar">Z</div>
+            <div className="briefavatar">{data[0].name.charAt(0).toUpperCase()}</div>
             <div
               className="name"
               style={{
