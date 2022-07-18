@@ -7,29 +7,46 @@ export const BriefProfile = ({ username, avaText }) => {
   return (
     <>
       <div className="loginCard">
-        <div className="briefavatar">
-          {avaText}
-        </div>
+        <div className="briefavatar">{avaText}</div>
         <div className="name">
           <p>{username}</p>
         </div>
-        <Link to="/add" style={{
-          textDecoration: 'none',
-          color: '#000000'
-        }}>
+        <Link
+          to="/add"
+          style={{
+            textDecoration: "none",
+            color: "#000000",
+          }}
+        >
           <div className="button">
-            <p style={{
-              fontFamily: 'inter',
-              fontSize: 14
-            }}>Add another startup idea</p>
+            <p
+              style={{
+                fontFamily: "inter",
+                fontSize: 14,
+              }}
+            >
+              Add another startup idea
+            </p>
           </div>
         </Link>
-        <div className="button">
-          <p style={{
-            fontFamily: 'inter',
-            fontSize: 14
-          }}>Go to your profile</p>
-        </div>
+        <Link
+          to="/profile"
+          style={{
+            textDecoration: "none",
+            color: "#000000",
+          }}
+        >
+          <div className="button">
+            <p
+              style={{
+                fontFamily: "inter",
+                fontSize: 14,
+              }}
+            >
+              Go to your profile
+            </p>
+          </div>
+        </Link>
       </div>
     </>
   );

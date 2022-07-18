@@ -45,8 +45,9 @@ router.get("/:id", async (req, res) => {
 router.get("/userInfo/:id", async (req, res) => {
   if (!mongoose.Types.ObjectId.isValid(req.params.id)) return res.status(400).send('invalid object ID');
   const startups = await User.findById(req.params.id);
+  const business = await Businesses.find({ author: req.params.id });
   if (!startups) return res.send('invalid object ID');
-  const obj = { name: startups.username, email: startups.email, id: startups._id }
+  const obj = [{ name: startups.username, email: startups.email, id: startups._id }, business];
   res.send(obj);
 });
 

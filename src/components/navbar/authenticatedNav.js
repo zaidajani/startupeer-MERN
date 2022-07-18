@@ -40,9 +40,13 @@ export const AuthNavBar = () => {
             flexDirection: "row",
           }}
         >
-          <div className="left">
-            <div className="login">{username}</div>
-          </div>
+          <Link to="/profile" style={{
+            textDecoration: 'none'
+          }}>
+            <div className="left">
+              <div className="login">{username}</div>
+            </div>
+          </Link>
           <div
             className="button"
             style={{

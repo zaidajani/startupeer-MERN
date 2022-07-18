@@ -36,7 +36,7 @@ export const StartupDetail = () => {
         axios
           .get(`http://localhost:4000/api/user/userInfo/${res.data.author}`)
           .then((res2) => {
-            setAuthData(res2.data);
+            setAuthData(res2.data[0]);
             setId(jwtDecode(localStorage.getItem("token")));
           });
       });
@@ -83,7 +83,7 @@ export const StartupDetail = () => {
             fontSize: 17,
           }}
         >
-          <b>Past 5 reviews</b>
+           {data.author === id._id ? <b>All the reviews</b> : <b>Past 5 reviews</b>}
           <div
             className="infoFlex"
             style={{
@@ -99,7 +99,7 @@ export const StartupDetail = () => {
                 <>
                   <p
                     style={{
-                      fontWeight: 400,
+                      fontWeight: 500,
                       marginLeft: 0,
                       marginTop: 25,
                       fontSize: 17,
@@ -113,7 +113,7 @@ export const StartupDetail = () => {
                     className="info"
                     style={{
                       marginLeft: 0,
-                      marginTop: 15,
+                      marginTop: 5,
                     }}
                   >
                     Made {format(review.dom)}{" "}

@@ -11,7 +11,9 @@ export const CardComp = ({ title, brief }) => {
             , {brief}
           </p>
         </div>
-        <div className="cardLabel">
+        <div className="cardLabel" style={{
+          fontFamily: 'Inter'
+        }}>
           <b>{title}</b>
         </div>
       </div>
