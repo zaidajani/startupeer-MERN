@@ -8,6 +8,7 @@ import { AuthenticatedView } from "./screens/authenticatedView/authenticatedView
 import { Review } from "./screens/review/review.screen";
 import { Form } from "./screens/form/form.screen";
 import { StartupDetail } from "./screens/startupDetail.screen";
+import { ProfileScreen } from './screens/profile/profile.screen';
 
 function App() {
   const [user, setUser] = React.useState("");
@@ -32,6 +33,7 @@ function App() {
               <Route path="/register" element={<Navigate to="/" />} />
               <Route path="/detail/:id" element={<StartupDetail />} />
               <Route path="/detail/review/:id" element={<Review />} />
+              <Route path="/profile" element={<ProfileScreen />} />
             </>
           ) : (
             <>

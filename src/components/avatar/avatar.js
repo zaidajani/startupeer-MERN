@@ -1,10 +1,10 @@
 import React from "react";
 import "./ava.css"
 
-export const Avatar = () => {
+export const Avatar = ({avatext}) => {
   return (
     <div className="avatar">
-      Z
+      {avatext}
     </div>
   )
 }

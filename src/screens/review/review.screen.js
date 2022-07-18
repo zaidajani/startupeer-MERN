@@ -6,7 +6,16 @@ import axios from "axios";
 export const Review = () => {
   const params = useParams();
   const [review, setReview] = React.useState('');
+  const [data, setData] = React.useState('');
   const navigate = useNavigate();
+
+  React.useEffect(() => {
+    axios
+      .get('http://localhost:4000/api/user/' + params.id)
+      .then(res => {
+        setData(res.data);
+      })
+  }, []);
 
   const postReview = () => {
     axios
@@ -28,7 +37,7 @@ export const Review = () => {
       <AuthNavBar />
       <div className="container mt4">
         <div className="tagline">
-          <p className="ptagline">Post your review for Spacer Spaces.</p>
+          <p className="ptagline">Post your review for { data.name }</p>
           <div className="inline">
             <div>
               <div className="field mt4">
