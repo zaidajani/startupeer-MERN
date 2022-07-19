@@ -27,10 +27,6 @@ It consists of 6 pages with dynamic content based on the authentication.
 
 <img src="./form.png" />
 
-### New startup page
-
-<img src="./form.png" />
-
 ### Startup review page
 
 <img src="./review.png" />
@@ -38,8 +34,6 @@ It consists of 6 pages with dynamic content based on the authentication.
 ### Profile page
 
 <img src="./profile.png" />
-
-# Technical part
 
 ## Run Locally
 
@@ -85,3 +79,15 @@ Run react app
 **Client:** React
 
 **Server:** Node, Express
+
+**Databse:** MongoDb
+
+## More about server
+
+* Node
+* Express
+* Mongoose
+* JWT
+* Bcrypt
+
+Pretty simple yet effective server.
