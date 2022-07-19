@@ -23,7 +23,11 @@ If you'd like help troubleshooting a docs PR you're working on, have a great new
 ### :lady_beetle: Issues
 Issues are used to track tasks that contributors can help with. If an issue has a triage label, we haven't reviewed it yet, and you shouldn't begin work on it.
 
-If you've found something in the content or the website that should be updated, search open issues to see if someone else has reported the same thing. If it's something new, open an issue using a [template](https://github.com/github/docs/issues/new/choose). We'll use the issue to have a conversation about the problem you want to fix.
+If you've found something in the content or the website that should be updated, search open issues to see if someone else has reported the same thing. If it's something new, open an issue. We'll use the issue to have a conversation about the problem you want to fix.
 
 ### :hammer_and_wrench: Pull requests
 A Pull request is a way to suggest changes in our repository. When we merge those changes, they should be deployed to the live site within 24 hours. :earth_africa:
+
+## Pull request merged on master branch 🎉
+
+Make sure your pull request is on branch master, isn't in merge conflict, and then if we find your updated code useful, we'll surely merge it.
