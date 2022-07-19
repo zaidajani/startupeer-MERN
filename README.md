@@ -1,5 +1,8 @@
 # Startupeer
 
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
+
+
 ### A utility where startup ideas meet market reviews about it. Open source and reliable.
 
 ---
@@ -91,3 +94,9 @@ Run react app
 * Bcrypt
 
 Pretty simple yet effective server.
+
+
+## Author profiles
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/zaid-ajani-67169b204/)
+[![twitter](https://img.shields.io/badge/youtube-red?style=for-the-badge&logo=twitter&logoColor=white)](https://youtube.com/zaidajani)
+[![twitter](https://img.shields.io/badge/Github-black?style=for-the-badge&logo=GitHub&logoColor=white)](https://github.com/zaidajani)
