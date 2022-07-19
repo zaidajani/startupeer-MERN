@@ -100,3 +100,7 @@ Pretty simple yet effective server.
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/zaid-ajani-67169b204/)
 [![twitter](https://img.shields.io/badge/youtube-red?style=for-the-badge&logo=twitter&logoColor=white)](https://youtube.com/zaidajani)
 [![twitter](https://img.shields.io/badge/Github-black?style=for-the-badge&logo=GitHub&logoColor=white)](https://github.com/zaidajani)
+
+## Contributors
+
+* <a href="http://github.com/zaidajani">zaidajani</a>
