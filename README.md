@@ -1,4 +1,4 @@
-# Startupee
+# Startupeer
 
 ### A utility where startup ideas meet market reviews about it. Open source and reliable.
 
@@ -79,3 +79,9 @@ Run react app
 ```bash
   npm run start
 ```
+
+## Tech Stack
+
+**Client:** React
+
+**Server:** Node, Express
