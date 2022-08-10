@@ -1,6 +1,7 @@
 # Startupeer
 
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b7060b85-7773-45db-9c40-ee6a04176f80/deploy-status)](https://app.netlify.com/sites/startupeer/deploys)
 
 
 ### A utility where startup ideas meet market reviews about it. Open source and reliable.
