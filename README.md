@@ -1,3 +1,6 @@
+
+</think>
+
 # Startupeer
 
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
@@ -84,7 +87,7 @@ Run react app
 
 **Server:** Node, Express
 
-**Databse:** MongoDb
+**Database:** MongoDB
 
 ## More about server
 
